@@ -1,4 +1,19 @@
+.centerDiv {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .answer {
   font-size: 5.5em;
   display: none;
+}
+
+.answerTable {
+  padding-top: 114px;
+  max-width: 800px;
+}
+
+.containerBox {
+  position: relative;
 }
