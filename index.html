@@ -2,29 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <title>Exponent Calculator</title>
     <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
     <div class='text-center'>
-      <h1>Exponent Calculator</h1>
-      <div class='row'>
-        <div class='col-sm-6'>
+      <h1>
+      <small>
+      Exponent Calculator
+      </small>
+      </h1>
 
+        <form class="form-inline expCalc">
           <form class='expCalc'>
             <input id='number' class='form-control' placeholder='Number' type="text">
-            <div class='input-group'>
-              <input id='power' class='form-control' placeholder='Power' type="text">
-              <span class='input-group-btn'>
-                <button class='btn btn-default' type='submit'>Submit!</button>
+            <input id='power' class='form-control' placeholder='Power' type="text">
+            <button class='btn btn-primary' type='submit'>Submit!</button>
               </span>
-            </div>
           </form>
-        </div>
-
+        </form>
         <h2 class="answer"></h2>
-      </div>
+
+    </div>
+
+    <div class="table">
+
+
     </div>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
