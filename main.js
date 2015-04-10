@@ -63,7 +63,7 @@ $('.expCalc').on('submit', function(e){
 
       // Add each calculation to running total
       var runningTotal = total += ans;
-
+      console.log(runningTotal);
       // Show running total after first calculation
       if(!showTotal){
         $('.runningTotal').fadeToggle();
@@ -74,9 +74,9 @@ $('.expCalc').on('submit', function(e){
       if(!showTable){
         $('.answerTable').fadeToggle();
         showTable = true;
+        }
       // Set running total
       $('.total').text(runningTotal);
-      }
     }
     else {
       $('.error').fadeToggle();
