@@ -34,6 +34,7 @@ $(document).on('ready', function() {
 var count = 0;
 var total = 0;
 var showTotal = false;
+var showTable = false;
 
 // Run calculation on form submit
 $('.expCalc').on('submit', function(e){
@@ -73,6 +74,11 @@ $('.expCalc').on('submit', function(e){
         $('.runningTotal').fadeToggle();
         showTotal = true;
       }
+
+      // Show table after first calculation
+      if(!showTable)
+        $('.answerTable').fadeToggle();
+        showTable = true;
       // Set running total
       $('.total').text(runningTotal);
     }
