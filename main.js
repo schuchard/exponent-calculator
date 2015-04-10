@@ -38,6 +38,7 @@ var showTable = false;
 
 // Run calculation on form submit
 $('.expCalc').on('submit', function(e){
+
   // Clear out previous number after first calculation has been made
   $('.answer').fadeOut('fast');
   e.preventDefault();
@@ -51,14 +52,8 @@ $('.expCalc').on('submit', function(e){
     // Reset form
     $('.expCalc')[0].reset();
 
-
-    if(isNaN(ans)){
-      $('.error').fadeToggle();
-      setTimeout(function(){
-        $('.error').fadeToggle();
-      },1500);
-    }
-    else {
+    // Check if inputs are numbers
+    if( (parseFloat(num) && isFinite(num)) && (parseFloat(pow) && isFinite(pow)) ){
       // Increment counter on each submit
       count++;
       // Add answer to page
@@ -76,11 +71,18 @@ $('.expCalc').on('submit', function(e){
       }
 
       // Show table after first calculation
-      if(!showTable)
+      if(!showTable){
         $('.answerTable').fadeToggle();
         showTable = true;
       // Set running total
       $('.total').text(runningTotal);
+      }
+    }
+    else {
+      $('.error').fadeToggle();
+      setTimeout(function(){
+        $('.error').fadeToggle();
+      },1500);
     }
 
     },300);
