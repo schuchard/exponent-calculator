@@ -27,7 +27,7 @@ var addRow = function(count, num, pow, ans) {
   var power = ('<td>' + pow + '</td>');
   var answer = ('<td>' + ans + '</td>');
 
-  return $('.answerTable tr').last().after('<tr>' + counter + number + power + answer + '</tr>');
+  return '<tr>' + counter + number + power + answer + '</tr>';
 };
 
 $(document).on('ready', function() {
@@ -58,12 +58,13 @@ $('.expCalc').on('submit', function(e){
       count++;
       // Add answer to page
       $('.answer').text(ans).slideDown('fast');
+
       // Add table row of each calculation
-      addRow(count, num, pow, ans);
+      $('.answerTable tr').last().after(addRow(count, num, pow, ans));
 
       // Add each calculation to running total
       var runningTotal = total += ans;
-      console.log(runningTotal);
+
       // Show running total after first calculation
       if(!showTotal){
         $('.runningTotal').fadeToggle();
