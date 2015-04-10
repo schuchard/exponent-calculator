@@ -9,6 +9,10 @@
   display: none;
 }
 
+.error {
+  display: none;
+}
+
 .answerTable {
   padding-top: 114px;
   max-width: 800px;
@@ -16,4 +20,12 @@
 
 .containerBox {
   position: relative;
+}
+
+.runningTotal {
+  display: none;
+}
+
+.runningTotal h2 {
+  margin-top: -15px;
 }
