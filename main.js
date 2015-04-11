@@ -76,8 +76,12 @@ $('.expCalc').on('submit', function(e){
         $('.answerTable').fadeToggle();
         showTable = true;
         }
-      // Set running total
-      $('.total').text(runningTotal);
+      // Set running total to toggle title on hover
+      $('.total').on('mouseenter', function(){
+        $('.total').text('Sum of answers: '+ runningTotal);
+      }).mouseleave(function(){
+        $('.total').text('Exponent Calculator');
+      });
     }
     else {
       $('.error').fadeToggle();
